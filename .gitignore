@@ -1,1 +1,13 @@
+venv/
 .venv/
+__pycache__/
+*.py[cod]
+*.sqlite
+serviceAccountKey.json
+instance/config.py
+.env
+.flaskenv
+*.log
+.DS_Store
+.idea/
+.vscode/
