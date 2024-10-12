@@ -6,7 +6,7 @@ app_routes = Blueprint('app_routes', __name__)
 def hello():
     return 'Welcome to Eunoia'
 
-@app_routes.route('/add-example', methods=['GET'])
+@app_routes.route('/add-example', methods=['POST'])
 def add_example():
     """Simple route to add a document to Firestore for testing."""
     try:
