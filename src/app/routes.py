@@ -12,17 +12,17 @@ def hello():
 #         db = current_app.config['FIRESTORE_DB']
 #         doc_ref = db.collection('')
 
-# @app_routes.route('/add-example', methods=['POST'])
-# def add_example():
-#     """Simple route to add a document to Firestore for testing."""
-#     try:
-#         db = current_app.config['FIRESTORE_DB']
-#         doc_ref = db.collection('schedules').document('example_doc')
-#         doc_ref.set({
-#             'title': 'Finish Firestore Setup',
-#             'due_date': '2024-10-11',
-#             'status': 'In Progress'
-#         })
-#         return 'Document added to Firestore!', 200
-#     except Exception as e:
-#         return f"An Error Occurred: {e}", 500
+@app_routes.route('/add-example', methods=['POST'])
+def add_example():
+    """Simple route to add a document to Firestore for testing."""
+    try:
+        db = current_app.config['FIRESTORE_DB']
+        doc_ref = db.collection('schedules').document('example_doc')
+        doc_ref.set({
+            'title': 'Finish Firestore Setup',
+            'due_date': '2024-10-11',
+            'status': 'In Progress'
+        })
+        return 'Document added to Firestore!', 200
+    except Exception as e:
+        return f"An Error Occurred: {e}", 500
